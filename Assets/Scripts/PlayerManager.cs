@@ -1,61 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class PlayerManager : MonoBehaviour
 {
     [Header("Impostazioni della partita")]
-    public int totalPlayersNumber; //Quanti players ci sono nella partita
+    public int totalPlayersNumber; // Quanti players ci sono nella partita
 
     [Header("Non toccare pls")]
-    public List<Player> playersInGame;
-    public List<Player> allPossiblePlayers;
+    public GameData gameData; // Riferimento allo ScriptableObject
+
     private int playersCount = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
         SetPlayers();
         Debug.Log(totalPlayersNumber);
-
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
+
     void SetPlayers()
     {
-        playersInGame.Clear();
+        gameData.playersInGame.Clear();
         playersCount = 0;
 
-        if(totalPlayersNumber <=2)
+        if (totalPlayersNumber < 2)
         {
             totalPlayersNumber = 2;
-        }else
-        if(totalPlayersNumber >= 8 /*allPossiblePlayers.Count*/)
+        }
+        else if (totalPlayersNumber > 8)
         {
-            totalPlayersNumber = 8 /*allPossiblePlayers.Count*/;
+            totalPlayersNumber = 8;
         }
 
-
-
-
-
-        for (int i = 0; i <= totalPlayersNumber; i++)
+        if (gameData.allPossiblePlayers.Count < totalPlayersNumber)
         {
-            playersInGame.Add(allPossiblePlayers[i]);
+            Debug.LogError("Non ci sono abbastanza giocatori possibili per il numero totale di giocatori specificato.");
+            return;
         }
 
-        foreach (Player player in playersInGame)
+        for (int i = 0; i < totalPlayersNumber; i++)
         {
+            gameData.playersInGame.Add(gameData.allPossiblePlayers[i]);
+        }
 
+        foreach (Player player in gameData.playersInGame)
+        {
             player.playerNum = playersCount + 1;
             player.isAlive = true;
             playersCount++;
         }
-        playersInGame[0].isHuman = true;
+
+        if (gameData.playersInGame.Count > 0)
+        {
+            gameData.playersInGame[0].isHuman = true;
+        }
 
         if (playersCount == totalPlayersNumber)
         {
