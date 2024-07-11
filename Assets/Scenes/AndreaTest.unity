@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 265459528}
   - component: {fileID: 265459527}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Territory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32b831da6a7bbf46a8e667430725984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nome: Padova
+  name: Islanda
   neighboringTerritories: []
   hoverColorIntensity: 1.5
   troopsNumber: 0
@@ -240,12 +240,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265459526}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.04, y: 0, z: 0}
-  m_LocalScale: {x: 4.15, y: 4.15, z: 4.15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1637836062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484649136
 GameObject:
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 1170390384}
   - component: {fileID: 1170390383}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Territory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32b831da6a7bbf46a8e667430725984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nome: islanda
+  name: Padova
   neighboringTerritories: []
   hoverColorIntensity: 1.5
   troopsNumber: 0
@@ -572,11 +572,60 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170390382}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 0, z: 0}
-  m_LocalScale: {x: 4.15, y: 4.15, z: 4.15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.21, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
+  m_Father: {fileID: 1637836062}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1637836060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637836062}
+  - component: {fileID: 1637836061}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1637836061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637836060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a050c8137bfe344936f56c893afc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoriesInScene: []
+  territoriesNumber: 0
+  playerManager: {fileID: 484649136}
+--- !u!4 &1637836062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637836060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.76, y: 0, z: -6.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1170390387}
+  - {fileID: 265459531}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2068193154
@@ -722,7 +771,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 2068193157}
   - {fileID: 946577021}
-  - {fileID: 1170390387}
-  - {fileID: 265459531}
+  - {fileID: 1637836062}
   - {fileID: 540774419}
   - {fileID: 484649138}

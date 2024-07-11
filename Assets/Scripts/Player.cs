@@ -9,12 +9,13 @@ public class Player : ScriptableObject
 
     [Header("Informazioni")]
     public string playerName;
-    public Material playerMateral;
+    public Material playerMaterial;
 
     [Header("Non toccare pls")]
     public int playerNum = 0;
     public bool isHuman = false;
     public bool isAlive = false;
+    public List <GameObject> territories = new List <GameObject>();
 
     // Start is called before the first frame update
     void Start()

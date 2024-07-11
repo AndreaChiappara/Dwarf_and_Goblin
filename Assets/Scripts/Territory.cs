@@ -5,7 +5,7 @@ using UnityEngine;
 public class Territory : MonoBehaviour
 {
     [Header("Informazioni Territorio")]
-    public string nome;
+    public string name;
     public List<Territory> neighboringTerritories;
 
     [Header("Cose da settare")]
@@ -35,23 +35,23 @@ public class Territory : MonoBehaviour
 
     public void OnLeftMouseClick()
     {
-        Debug.Log("Hai LEFTcliccato sulla regione: " + nome);
+        Debug.Log("Hai LEFTcliccato sul Territorio: " + name);
     }
     public void OnRightMouseClick()
     {
-        Debug.Log("Hai RIGHTcliccato sulla regione: " + nome);
+        Debug.Log("Hai RIGHTcliccato sul Territorio: " + name);
     }
 
     public void OnMouseEnter()
     {
-        Debug.Log("Sei entrato sulla regione: " + nome);
+        Debug.Log("Sei entrato nel Territorio: " + name);
         HoverColor();
 
     }
 
     public void OnMouseExit()
     {
-        Debug.Log("Sei uscito dalla regione: " + nome);
+        Debug.Log("Sei uscito dal Territorio: " + name);
         UpdateColor();
     }
 
@@ -71,7 +71,7 @@ public class Territory : MonoBehaviour
     {
         if(owner != null)
         {
-            thisRenderer.material = owner.playerMateral;
+            thisRenderer.material = owner.playerMaterial;
         }else
         {
             thisRenderer.material = territoryMaterial;
