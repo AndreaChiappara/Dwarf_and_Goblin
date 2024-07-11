@@ -6,4 +6,5 @@ public class GameData : ScriptableObject
 {
     public List<Player> playersInGame;
     public List<Player> allPossiblePlayers;
+    public List<Player> turnOrder;
 }

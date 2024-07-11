@@ -16,7 +16,6 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         SetPlayers();
-        Debug.Log(totalPlayersNumber);
     }
 
     void Update()
@@ -63,6 +62,7 @@ public class PlayerManager : MonoBehaviour
 
         if (playersCount == totalPlayersNumber)
         {
+            gameData.turnOrder = gameData.playersInGame;
             StartGame();
         }
     }

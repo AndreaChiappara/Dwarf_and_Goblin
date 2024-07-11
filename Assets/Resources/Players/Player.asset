@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   playerName: YourName
-  playerMateral: {fileID: 2100000, guid: c4e48d11d874df1418184e8b0b003a08, type: 2}
+  playerMaterial: {fileID: 2100000, guid: c4e48d11d874df1418184e8b0b003a08, type: 2}
   playerNum: 1
-  isHuman: 0
-  isAlive: 0
+  isHuman: 1
+  isAlive: 1
+  territories: []
