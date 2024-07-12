@@ -17,4 +17,6 @@ MonoBehaviour:
   playerNum: 1
   isHuman: 1
   isAlive: 1
-  territories: []
+  territories:
+  - {fileID: 0}
+  faction: {fileID: 11400000, guid: 425e6caea3d047540a8845edc416fd51, type: 2}

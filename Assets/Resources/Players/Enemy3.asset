@@ -18,3 +18,4 @@ MonoBehaviour:
   isHuman: 0
   isAlive: 0
   territories: []
+  faction: {fileID: 11400000, guid: e0a7978db5fa85347985d43df4645217, type: 2}

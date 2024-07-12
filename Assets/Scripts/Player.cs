@@ -6,7 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Player", menuName = "Player")]
 public class Player : ScriptableObject
 {
-
     [Header("Informazioni")]
     public string playerName;
     public Material playerMaterial;
@@ -16,6 +15,8 @@ public class Player : ScriptableObject
     public bool isHuman = false;
     public bool isAlive = false;
     public List <GameObject> territories = new List <GameObject>();
+    public Faction faction;
+
 
     // Start is called before the first frame update
     void Start()

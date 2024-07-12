@@ -17,6 +17,7 @@ public class MapManager : MonoBehaviour
         {
             territoriesInScene.Add(child.gameObject);
             territoriesNumber++;
+            //DAGLI UN ORDINE
         }
     }
 
